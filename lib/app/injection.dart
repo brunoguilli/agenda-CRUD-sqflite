@@ -5,7 +5,7 @@ import 'package:get_it/get_it.dart';
 
 setupInjection() {
   GetIt getIt = GetIt.I;
-// Quando formos usar as especificações do DAO é para ainjetar o ContactDAOImpl
+// Quando formos usar as especificações do DAO é para injetar o ContactDAOImpl
 // Obs: Quando trocar de tecnologia do banco de dados, basta trocar o ContactDAOImpl por outro método
 // registerSingleton -> Cria um unico ojeto para atender todo mundo
   getIt.registerSingleton<ContactDAO>(ContactDAOImpl());

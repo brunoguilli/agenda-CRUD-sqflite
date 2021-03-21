@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/brunoliberali/FlutterProjects/agenda_crud/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/brunoliberali/FlutterProjects/agenda-CRUD-sqflite/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "/Users/brunoliberali/FlutterProjects/agenda_crud/android/app/src/main/res/values/styles.xml",
+                    "source": "/Users/brunoliberali/FlutterProjects/agenda-CRUD-sqflite/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
