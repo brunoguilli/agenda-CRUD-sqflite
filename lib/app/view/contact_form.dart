@@ -1,22 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
+import 'contact_form_back.dart';
+
 class ContactForm extends StatelessWidget {
-  Widget fieldName() {
+  Widget fieldName(ContactFormBack back) {
     return TextFormField(
+      initialValue: back.contact.nome,
       decoration: InputDecoration(labelText: "Nome"),
     );
   }
 
-  Widget fieldEmail() {
+  Widget fieldEmail(ContactFormBack back) {
     return TextFormField(
+      initialValue: back.contact.email,
       decoration: InputDecoration(labelText: "E-mail"),
     );
   }
 
-  Widget fieldPhone() {
+  Widget fieldPhone(ContactFormBack back) {
     var mask = MaskTextInputFormatter(mask: "(##) # ####-####");
     return TextFormField(
+      initialValue: back.contact.telefone,
       inputFormatters: [mask],
       keyboardType: TextInputType.number,
       decoration:
@@ -24,8 +29,9 @@ class ContactForm extends StatelessWidget {
     );
   }
 
-  Widget fieldURLImage() {
+  Widget fieldURLImage(ContactFormBack back) {
     return TextFormField(
+      initialValue: back.contact.urlAvatar,
       decoration: InputDecoration(
           labelText: "Endereço Foto", hintText: "http://www.site.com"),
     );
@@ -33,6 +39,8 @@ class ContactForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var _back = ContactFormBack(context);
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Cadastro de Contato"),
@@ -43,10 +51,10 @@ class ContactForm extends StatelessWidget {
         child: Form(
           child: Column(
             children: [
-              fieldName(),
-              fieldEmail(),
-              fieldPhone(),
-              fieldURLImage()
+              fieldName(_back),
+              fieldEmail(_back),
+              fieldPhone(_back),
+              fieldURLImage(_back)
             ],
           ),
         ),
