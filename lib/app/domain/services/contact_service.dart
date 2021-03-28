@@ -45,7 +45,7 @@ class ContactService {
   }
 
   validatePhone(String phone) {
-    var format = RegExp(r'ˆ\([1-9]{2}\) [9] [6-9]{1}[0-9]{3}\-[0-9]{4}$');
+    var format = RegExp(r'^\([1-9]{2}\) [9] [6-9]{1}[0-9]{3}\-[0-9]{4}$');
     if (phone == null) {
       throw new DomainLayerException("O telefone é obrigatório.");
     } else if (!format.hasMatch(phone)) {

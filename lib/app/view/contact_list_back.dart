@@ -34,6 +34,10 @@ abstract class _ContactListBack with Store {
         .then(refreshList);
   }
 
+  goToDetails(BuildContext context, Contact contact) {
+    Navigator.of(context).pushNamed(MyApp.CONTACT_DATAILS, arguments: contact);
+  }
+
   remove(int id) {
     print("remove id: $id");
     _service.remove(id);
